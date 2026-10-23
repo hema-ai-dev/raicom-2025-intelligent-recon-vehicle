@@ -1,0 +1,10 @@
+path: ../../datasets/soldier
+train: train/images
+val: val/images
+test: test/images
+
+names:
+  0: Enemy
+  1: Enemy
+  2: Friendly
+  3: Hostage

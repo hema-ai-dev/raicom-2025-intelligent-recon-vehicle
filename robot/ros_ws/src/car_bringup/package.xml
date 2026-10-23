@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>car_bringup</name>
+  <version>0.1.0</version>
+  <description>Vehicle odometry, serial bridge, and localization configuration used by the 2025 car.</description>
+
+  <maintainer email="raicom-team@example.invalid">RAICOM 2025 Team</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>robot_localization</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>tf</depend>
+</package>

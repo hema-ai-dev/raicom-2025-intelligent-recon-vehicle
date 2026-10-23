@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ROS / catkin
+robot/ros_ws/build/
+robot/ros_ws/devel/
+robot/ros_ws/install/
+robot/ros_ws/log/
+*.bag
+*.bag.active
+
+# Local data and generated results
+artifacts/
+**/runs/
+datasets/
+data_private/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Temporary files and private references
+private_reference/
+*.zip
+*.tmp
+*.log

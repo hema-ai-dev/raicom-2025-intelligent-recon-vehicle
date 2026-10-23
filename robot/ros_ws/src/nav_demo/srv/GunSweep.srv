@@ -1,0 +1,9 @@
+# 请求参数（客户端传入）
+int8 min_angle  # 最小角度
+int8 max_angle  # 最大角度
+int8 angle
+int8 num
+---
+# 响应参数（服务端返回）
+bool success       # 是否成功
+string message     # 状态信息

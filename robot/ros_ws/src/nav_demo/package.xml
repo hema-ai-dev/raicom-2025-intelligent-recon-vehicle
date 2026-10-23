@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>nav_demo</name>
+  <version>0.1.0</version>
+  <description>RAICOM 2025 navigation, recognition, and water-gun mission integration.</description>
+
+  <maintainer email="raicom-team@example.invalid">RAICOM 2025 Team</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+
+  <depend>actionlib</depend>
+  <depend>amcl</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>geometry_msgs</depend>
+  <depend>gmapping</depend>
+  <depend>map_server</depend>
+  <depend>move_base</depend>
+  <depend>move_base_msgs</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <exec_depend>message_runtime</exec_depend>
+</package>
