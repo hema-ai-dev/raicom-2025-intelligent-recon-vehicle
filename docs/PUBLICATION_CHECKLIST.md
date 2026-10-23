@@ -1,12 +1,14 @@
-# GitHub 发布检查表
+# Publication Checklist
 
-- [ ] 团队成员同意公开这份代码与模型。
-- [ ] 确认仓库名称、简介和署名方式。
-- [ ] 选择团队原创代码许可证；如暂不授权，保持无顶层 `LICENSE`。
-- [ ] 安装 Git LFS，并确认三个 `.pt` 文件作为 LFS 对象提交。
-- [ ] 确认仓库中没有国赛报告、主办方资料、原始数据集或人物照片。
-- [ ] 在 GitHub Actions 中看到 `validate` 工作流通过。
-- [ ] 不把保留训练指标描述为独立测试集成绩或赛场准确率。
-- [ ] 不把深度相机闭环原型描述为最终赛场方案。
-- [ ] 水弹枪相关代码保留默认禁用和安全警告。
-- [ ] 如果以后补充演示视频，先确认视频中的人员、场地和音乐可公开。
+English | [简体中文](PUBLICATION_CHECKLIST.zh-CN.md)
+
+- [ ] Confirm that all contributors agree to publish the code and model weights.
+- [ ] Confirm the repository name, description, and attribution wording.
+- [ ] Select a license for project-authored code, or intentionally keep the repository without a top-level `LICENSE`.
+- [ ] Install Git LFS and confirm that all three `.pt` files are committed as LFS objects.
+- [ ] Confirm that no competition report, organizer material, raw dataset, or photo containing people is included.
+- [ ] Confirm that the GitHub Actions `validate` workflow passes.
+- [ ] Do not describe retained validation metrics as independent test-set or competition-field accuracy.
+- [ ] Do not describe the depth-camera aiming prototype as the final competition strategy.
+- [ ] Keep the launcher controller disarmed by default and retain the safety warning.
+- [ ] Before adding a demonstration video, verify permission for all people, locations, and audio appearing in it.

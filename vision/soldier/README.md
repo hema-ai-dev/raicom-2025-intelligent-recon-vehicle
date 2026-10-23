@@ -1,6 +1,8 @@
-# 兵人识别
+# Soldier-Board Recognition
 
-`train.py`、`infer.py` 和 `evaluate.py` 是从历史训练脚本整理出的可移植入口。默认推理权重是 `models/soldier/final_training_best.pt`。
+English | [简体中文](README.zh-CN.md)
+
+`train.py`, `infer.py`, and `evaluate.py` are portable entry points reconstructed from the historical training scripts. Inference defaults to `models/soldier/final_training_best.pt`.
 
 ```bash
 python vision/soldier/infer.py image.jpg
@@ -8,6 +10,6 @@ python vision/soldier/evaluate.py --data path/to/data.yaml
 python vision/soldier/train.py
 ```
 
-训练前必须编辑 `data.example.yaml`，将三个路径改为本机数据目录。数据没有随仓库发布。
+Before training, edit `data.example.yaml` and replace its three placeholder paths with local dataset paths. The dataset is not published.
 
-训练记录位于 `training_record/`。最后一行对应 epoch 125；训练参数最初请求 250 epochs，但由早停机制提前结束。
+The retained training record is under `training_record/`. Its final row is epoch 125: the run requested 250 epochs but stopped early.

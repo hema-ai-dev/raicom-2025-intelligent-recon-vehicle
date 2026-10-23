@@ -1,24 +1,26 @@
-# 工程取舍
+# Engineering Decisions
 
-## 为什么没有把闭环瞄准写成最终方案
+English | [简体中文](DESIGN_DECISIONS.zh-CN.md)
 
-闭环瞄准在研发阶段已经形成代码和模型，但“做出来”不等于“适合在这台车上比赛”。最终决策考虑了四个约束：
+## Why closed-loop aiming was not the final strategy
 
-1. 车载性能不足，多个视觉和 ROS 进程同时运行时响应变慢。
-2. 水弹枪相关进程切换会产生明显卡顿，完成后可能拖住 SLAM。
-3. 深度相机与持续推理增加功耗，比赛续航余量有限。
-4. 扫射虽然精细度较低，但时序更确定，故障面更小。
+The depth-camera aiming pipeline reached a working prototype, but a working prototype was not automatically the best competition solution for this vehicle. The final decision reflected four constraints:
 
-公开版因此把两条路线同时保留：`robot/prototype/` 展示闭环研发能力，`gun_sweep_server.py` 代表最终工程选择。
+1. Limited onboard performance caused slower responses when several vision and ROS processes ran together.
+2. Switching into the water-gun workload introduced visible stalls and could leave SLAM unresponsive afterward.
+3. Continuous depth-camera and inference use reduced the available battery margin.
+4. The sweep strategy was less precise but more deterministic and exposed fewer failure modes.
 
-## 为什么不公开原始数据集
+Both paths are preserved: `robot/prototype/` demonstrates the closed-loop experiment, while `gun_sweep_server.py` represents the final engineering choice.
 
-数据集中可能包含人员、场地和未经确认授权的素材；同时体量不适合普通 Git 仓库。仓库只公开数据配置示例、训练参数、验证指标和曲线。模型卡明确说明这些指标不是独立测试集或赛场准确率。
+## Why the raw datasets are not published
 
-## 为什么不打包第三方 ROS 驱动
+The datasets may include people, competition locations, and material whose redistribution permission was never confirmed. They are also unsuitable for a normal Git repository due to their size. This repository publishes configuration examples, training arguments, validation records, and aggregate plots instead.
 
-厂商驱动与开源导航组件有各自的版本和许可证。直接复制历史工作区会让原创边界不清晰，也会把旧构建方式固定下来。GitHub 版保留依赖名称和接口，驱动由使用者从上游安装。
+## Why third-party ROS drivers are not vendored
 
-## 为什么没有“一键运行”
+Hardware drivers and navigation components have their own versions, upstream maintainers, and licenses. Copying entire historical dependencies would blur the project boundary and preserve outdated build assumptions. The public edition records the dependency names and interfaces while leaving installation to the respective upstream projects.
 
-这个项目依赖真实底盘、串口映射、传感器型号、标定参数和赛场地图。当前没有原车环境可以重新验证统一启动顺序。相比给出看似方便但未经验证的脚本，仓库选择明确列出模块入口和复现边界。
+## Why there is no one-command launch script
+
+The complete system depends on the physical chassis, serial-device mapping, sensor models, calibration, and competition map. The original vehicle is not available for a new end-to-end verification. The repository therefore documents module entry points and reproduction limits instead of presenting an unverified one-command launch procedure.

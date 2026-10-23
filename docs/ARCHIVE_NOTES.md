@@ -1,14 +1,16 @@
-# 从原始归档到公开版
+# Archive Curation Notes
 
-公开版只选择 2025 国赛主线。2024 工程和 2025 省赛材料没有进入本仓库，也没有用旧代码填补无法确认的 2025 实现。
+English | [简体中文](ARCHIVE_NOTES.zh-CN.md)
 
-本次排除：
+This public edition follows the 2025 national-competition project only. The 2024 project and the 2025 provincial-stage submission are not included, and unconfirmed 2025 components were not reconstructed from older code.
 
-- 国赛报告、报名信息和主办方水弹枪资料；
-- 原始兵人、靶标数据集和可能含人员的实车照片；
-- 完整 Ultralytics、YOLOv5 副本及训练缓存；
-- ROS `build`、`devel`、IDE 配置和导出日志；
-- 未被最终启动配置引用的旧地图和重复参数；
-- YDLIDAR、WIT Motion、rf2o、waterplus 等第三方源码副本。
+The following material was excluded:
 
-公开版对少数文件进行了可移植性与安全性整理，详见根目录 `CHANGELOG.md`。离线整理版仍保留原始抽取结果，用于历史核对。
+- competition reports, registration details, and organizer-provided water-gun documentation;
+- raw soldier-board and target datasets, plus vehicle photos that may contain people;
+- complete Ultralytics and YOLOv5 framework copies and training caches;
+- ROS `build` and `devel` trees, IDE settings, and CAD export logs;
+- older maps and duplicate parameter files not referenced by the final retained launch configuration;
+- copied third-party source for YDLIDAR, WIT Motion, rf2o, waterplus, and similar dependencies.
+
+A small number of files were cleaned for portability and safe public presentation. See the root-level `CHANGELOG.md`. The offline curated archive still preserves the extracted historical state for comparison.

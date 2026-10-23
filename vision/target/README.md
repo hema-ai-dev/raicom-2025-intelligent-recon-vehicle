@@ -1,6 +1,8 @@
-# 水弹枪靶标识别
+# Water-Gun Target Detection
 
-该模型用于深度相机闭环瞄准原型，不代表最终赛场策略。最终方案采用固定范围扫射。
+English | [简体中文](README.zh-CN.md)
+
+This model supports the depth-camera closed-loop aiming prototype. It does not represent the final competition strategy, which used a fixed-range sweep.
 
 ```bash
 python vision/target/infer.py image.jpg
@@ -8,4 +10,4 @@ python vision/target/evaluate.py --data path/to/data.yaml
 python vision/target/train.py
 ```
 
-训练前必须编辑 `data.example.yaml`。原始靶标数据没有随仓库发布。
+Edit `data.example.yaml` before training. The original target dataset is not published.

@@ -33,11 +33,20 @@ CORE_PYTHON = (
 
 REQUIRED = (
     "README.md",
+    "README.zh-CN.md",
     "NOTICE.md",
     "docs/ARCHITECTURE.md",
+    "docs/ARCHITECTURE.zh-CN.md",
     "docs/DESIGN_DECISIONS.md",
+    "docs/DESIGN_DECISIONS.zh-CN.md",
     "docs/REPRODUCIBILITY.md",
+    "docs/REPRODUCIBILITY.zh-CN.md",
     "models/MODEL_CARD.md",
+    "models/MODEL_CARD.zh-CN.md",
+    "vision/soldier/README.md",
+    "vision/soldier/README.zh-CN.md",
+    "vision/target/README.md",
+    "vision/target/README.zh-CN.md",
     "robot/ros_ws/src/nav_demo/map/xiaomingPP.yaml",
     "robot/ros_ws/src/nav_demo/map/xiaomingPP.pgm",
 )

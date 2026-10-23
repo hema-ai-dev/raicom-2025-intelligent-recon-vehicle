@@ -1,30 +1,32 @@
-# 模型卡
+# Model Card
 
-## 文件
+English | [简体中文](MODEL_CARD.zh-CN.md)
 
-| 文件 | 用途 | SHA-256 |
+## Files
+
+| File | Historical role | SHA-256 |
 |---|---|---|
-| `soldier/final_training_best.pt` | 最后一次兵人训练的最佳权重，用于对应训练指标 | `1C84949A79C15036730BD4A87877BDF1E9A947D9EE87FB33937803DB161ADCD4` |
-| `soldier/robot_deployed_best.pt` | 实车识别脚本明确引用的兵人权重 | `78F8D2E91C832CBFCAA1AD56888F8DC1E939AD94F33AF5A88AF53B9C9C43EC7A` |
-| `target/best.pt` | 深度相机闭环瞄准原型的靶标权重 | `8FEC08A1ACA0BDA03E6FFC723B574B2CF577565311507A31043870923B99E166` |
+| `soldier/final_training_best.pt` | Best weight from the last retained soldier-board training run; corresponds to the published training metrics | `1C84949A79C15036730BD4A87877BDF1E9A947D9EE87FB33937803DB161ADCD4` |
+| `soldier/robot_deployed_best.pt` | Soldier-board weight explicitly referenced by the vehicle backup | `78F8D2E91C832CBFCAA1AD56888F8DC1E939AD94F33AF5A88AF53B9C9C43EC7A` |
+| `target/best.pt` | Target-center weight used by the depth-camera aiming prototype | `8FEC08A1ACA0BDA03E6FFC723B574B2CF577565311507A31043870923B99E166` |
 
-## 任务与类别
+## Tasks and class semantics
 
-- 最后一次兵人训练配置保留了四个类别位置，但其中两个原始名称同为 `Enemy`。实车权重使用 `red / white / blue / colorful`，运行时映射为 `enemy / hostage / friend`。
-- 靶标模型只有 `target_center` 一个类别。
+- The final soldier-board training configuration retained four class slots, including two entries named `Enemy`. The deployed vehicle weight uses `red / white / blue / colorful`, which the runtime maps to `enemy / hostage / friend`.
+- The target model contains one class: `target_center`.
 
-由于两份兵人权重哈希不同、类别记录也不同，仓库没有把它们伪装成同一模型版本。
+The two soldier weights have different hashes and different retained class records. This repository deliberately does not present them as the same model version.
 
-## 指标边界
+## Metric boundary
 
-README 中的指标来自训练过程保留的最后一轮验证记录。没有独立测试集、交叉验证或当前环境复测，因此不应将其解释为泛化能力、赛场准确率或安全保证。
+The metrics shown in the main README come from the last validation epoch in the retained training logs. There is no independent test set, cross-validation result, or current-environment rerun, so the values must not be interpreted as guaranteed generalization, competition-field accuracy, or a safety measure.
 
-## 预期用途
+## Intended use
 
-这些权重用于竞赛工程归档、课程交流和离线演示。它们不适用于人员身份识别、监控、执法或任何高风险自动决策。
+These weights are retained for competition engineering archives, education, and offline demonstrations. They are not intended for identity recognition, surveillance, law enforcement, or any high-risk automated decision.
 
-## 已知风险
+## Known risks
 
-- 原始数据没有公开，无法完整审查类别平衡、标注质量和授权状态。
-- 训练场景与新的相机、光照、背景或打印材质之间可能存在明显域偏移。
-- 模型可能产生漏检、误检或错误角色映射，不能作为水弹装置的唯一安全条件。
+- The raw datasets are not public, so class balance, annotation quality, and source permissions cannot be fully audited here.
+- New cameras, lighting, backgrounds, and printed target materials may introduce substantial domain shift.
+- The models can miss or misclassify targets and must never be the only safety condition for a projectile launcher.
