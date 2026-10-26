@@ -1,6 +1,8 @@
-# Reproducibility Notes
+# Environment Notes and Archive Boundary
 
 English | [简体中文](REPRODUCIBILITY.zh-CN.md)
+
+> This is not a complete reproduction guide. The original vehicle cannot be reconstructed from this repository alone because its exact hardware, drivers, calibration, and mixed ROS/Python runtime were not fully preserved.
 
 ## What has been verified
 

@@ -2,16 +2,30 @@
 
 English | [简体中文](README.zh-CN.md)
 
-An archived project from the 2025 RAICOM Robot Developer Competition. The system combines ROS-based autonomous navigation, YOLO11 soldier-board recognition, and water-gun task control on a mobile robot.
+An engineering case study and curated archive from the 2025 RAICOM Robot Developer Competition. The original vehicle combined ROS-based autonomous navigation, YOLO11 soldier-board recognition, and water-gun task control.
 
-> This repository is a curated technical showcase, not a mirror of the original development drive or a plug-and-play hardware release.
+> This repository preserves representative source code, model artifacts, training records, and engineering decisions. It is not a complete reconstruction of the original development drive, a reproducible robot stack, or a deployable hardware release.
 
-## What it does
+## Archive status
 
-- Navigates the competition field with ROS Melodic, AMCL, Dijkstra global planning, and DWA local planning.
-- Detects enemy, friendly, and hostage soldier boards with YOLO11 and records per-zone counts.
-- Includes a depth-camera-assisted closed-loop aiming prototype developed during experimentation.
-- Uses a deterministic sweep strategy in the final competition configuration to reduce compute load, SLAM disruption, and power consumption.
+| Component | Status |
+|---|---|
+| Model weights | Preserved, hash-verified, and stored with Git LFS |
+| Training records and plots | Preserved; headline metrics checked against the retained CSV files |
+| Vision entry points | Source available; not rerun in the current archive environment |
+| ROS navigation and mission source | Historical reference; not rebuilt or tested on the original vehicle after curation |
+| Closed-loop aiming prototype | Incomplete experimental artifact; external YOLOv5 code and calibration data are not included |
+| Full vehicle deployment | Not reproducible without the original hardware, drivers, calibration, and runtime environment |
+| Raw datasets | Not published because redistribution permission and privacy could not be fully verified |
+
+## 2025 system scope
+
+- The competition vehicle used ROS Melodic, AMCL, Dijkstra global planning, and DWA local planning for field navigation.
+- YOLO11 models detected enemy, friendly, and hostage soldier boards and supported per-zone counting.
+- A depth-camera-assisted closed-loop aiming pipeline was explored during development.
+- The final engineering decision favored a deterministic sweep strategy to reduce compute load, SLAM disruption, and power consumption.
+
+The diagram below summarizes the historical system design; it is not an executable call trace of the retained source tree.
 
 ```mermaid
 flowchart LR
@@ -23,6 +37,16 @@ flowchart LR
     D[Depth Camera] -. Experimental prototype .-> A[Target Detection and Closed-Loop Aiming]
     A -. Not used as the final field strategy .-> G
 ```
+
+## My contribution
+
+The repository owner was the primary developer and system integrator for this project. The work covered:
+
+- ROS navigation setup, waypoint sequencing, and field-specific parameter tuning;
+- soldier-board and target data preparation, YOLO training, evaluation, and model selection;
+- camera inference, per-zone role counting, and integration with the mission flow;
+- depth-camera aiming experiments and the final sweep-control implementation;
+- vehicle integration, field debugging, and the compute, SLAM-stability, and battery trade-offs behind the final strategy.
 
 ## Results
 
@@ -39,10 +63,10 @@ The following values come from the final validation epoch in the retained traini
 
 ## Key code
 
-- `robot/ros_ws/src/nav_demo/scripts/mission_controller.py` — route waypoints, zone-specific navigation parameters, recognition hooks, and sweep-service integration.
+- `robot/ros_ws/src/nav_demo/scripts/mission_controller.py` — retained route waypoints, zone-specific navigation parameters, recognition hooks, and historical sweep-service integration points; the active archived path is incomplete.
 - `robot/ros_ws/src/nav_demo/scripts/soldier_detector.py` — one-frame capture, YOLO inference, and three-role counting.
 - `robot/ros_ws/src/nav_demo/scripts/gun_sweep_server.py` — sweep service with input validation and a safe, disarmed-by-default configuration.
-- `robot/prototype/auto_aim_controller.py` — depth-camera closed-loop aiming prototype.
+- `robot/prototype/auto_aim_controller.py` — reference-only depth-camera aiming prototype; its external YOLOv5 runtime and calibration data are not included.
 - `vision/soldier/` and `vision/target/` — portable training, inference, and evaluation entry points.
 
 ## Repository layout
@@ -76,18 +100,15 @@ python vision/target/infer.py path/to/image.jpg
 
 Training and evaluation require a local dataset. Replace the placeholder paths in the relevant `data.example.yaml`; the original datasets are not published.
 
-## ROS reproduction boundary
+## Archive and reproduction boundary
 
-The robot code was recovered from the competition vehicle backup and targeted Ubuntu 18.04 with ROS Melodic. This public edition retains the project-specific mission package, chassis package, robot description, and final configuration. LiDAR, IMU, and other vendor drivers are external dependencies; see [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
+The robot code was recovered from the competition vehicle backup and targeted Ubuntu 18.04 with ROS Melodic. The exact historical Python, ROS, driver, and hardware environment was not preserved well enough for full reconstruction. This edition therefore presents the project-specific mission package, chassis package, robot description, and retained configuration as historical engineering evidence. See [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for the known boundaries.
 
 ```bash
-cd robot/ros_ws
-catkin_make
-source devel/setup.bash
-python3 ../../tools/validate_repo.py
+python tools/validate_repo.py
 ```
 
-These commands describe the workspace structure; they do not claim a newly verified full-vehicle deployment. Map selection, serial ports, camera indices, USB rules, sensor models, and calibration must be checked against the actual hardware.
+This command checks archive structure, syntax, hashes, metrics, and publication boundaries only. It is not a ROS build, integration test, or hardware validation.
 
 ## Safety
 

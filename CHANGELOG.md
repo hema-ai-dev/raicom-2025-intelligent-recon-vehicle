@@ -1,5 +1,13 @@
 # Changelog
 
+## Presentation clarification
+
+- Reframed the repository as an engineering case study and curated archive rather than a reproducible robot stack.
+- Added a component status table and a summary of the repository owner's primary contributions.
+- Clarified that the retained mission path is partial and that its gun-service calls are commented out.
+- Marked the closed-loop aiming controller as a reference-only prototype with missing external runtime and calibration assets.
+- Removed the unverified claim that the packaged YOLO11 target weight is directly compatible with the retained YOLOv5-style prototype.
+
 ## GitHub showcase edition
 
 - Split the 2025 national-competition project from the 2024 and provincial-competition archives.
