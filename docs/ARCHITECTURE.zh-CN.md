@@ -29,7 +29,7 @@ sequenceDiagram
 - AMCL 负责已知地图定位。
 - GlobalPlanner 使用 Dijkstra 模式生成全局路径。
 - DWA 完成局部避障，并允许任务控制器按赛区调整速度和膨胀半径。
-- `car_bringup` 提供底盘里程计和 EKF 配置；`mowen` 提供 URDF 与可视化模型。
+- `car_bringup` 提供底盘里程计和 EKF 配置；车模包（`mowen`）因包含主办方提供的内容，仅保存在私有档案中，不在本公开版内。
 
 公开版只保留 `xiaomingPP` 地图，因为归档中的 `nav03_map_server.launch` 将它设为默认地图。其他 2023/2024 或未明确使用的地图仍保存在离线总档案中。
 

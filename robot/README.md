@@ -6,7 +6,8 @@
 
 - `nav_demo`: map, navigation parameters, mission script, detector and `GunSweep.srv`.
 - `car_bringup`: chassis odometry, serial bridge and localization configuration.
-- `mowen`: URDF, meshes and RViz configuration.
+
+The vehicle model package (`mowen`) is not included here because it contains competition-supplied material; it is kept in the private archive only.
 
 Hardware drivers are external dependencies and are not vendored in this showcase.
 

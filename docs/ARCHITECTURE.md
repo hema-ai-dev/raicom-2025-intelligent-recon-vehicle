@@ -30,7 +30,7 @@ sequenceDiagram
 - GlobalPlanner runs in Dijkstra mode for global path generation.
 - DWA handles local obstacle avoidance, with mission-specific velocity and inflation-radius adjustments.
 - `car_bringup` provides chassis odometry and EKF configuration.
-- `mowen` provides the URDF and visualization model.
+- The vehicle model package (`mowen`) is kept in the private archive only and is not part of this public edition.
 
 The public edition retains only the `xiaomingPP` map because the archived `nav03_map_server.launch` selects it by default. Other historical or unconfirmed maps remain in the offline archive.
 

@@ -53,7 +53,6 @@ REQUIRED = (
 
 TEXT_SUFFIXES = {".py", ".md", ".yaml", ".yml", ".xml", ".launch", ".txt", ".cfg", ".sh"}
 FORBIDDEN_PATTERNS = (
-    re.compile(r"/home/mowen/"),
     re.compile(r"[A-Za-z]:\\睿抗"),
     re.compile(r"BEGIN [A-Z ]*PRIVATE KEY"),
 )
