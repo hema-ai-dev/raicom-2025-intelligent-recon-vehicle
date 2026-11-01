@@ -73,7 +73,7 @@ flowchart LR
 
 ```text
 .
-├─ docs/                  架构、工程取舍、复现边界和整理记录
+├─ docs/                  系统架构与工程取舍
 ├─ media/training/        训练曲线、PR 曲线和归一化混淆矩阵
 ├─ models/                三份可追溯权重（Git LFS）
 ├─ robot/
@@ -102,7 +102,7 @@ python vision/target/infer.py path/to/image.jpg
 
 ## 归档与复现边界
 
-ROS 代码来自比赛实车备份，目标环境是 Ubuntu 18.04 + ROS Melodic。由于当年的 Python、ROS、驱动和硬件环境没有被完整保存，当前无法重建整套系统。本版本将保留的任务包、底盘包和配置作为历史工程证据展示；已知边界见 `docs/REPRODUCIBILITY.zh-CN.md`。
+ROS 代码来自比赛实车备份，目标环境是 Ubuntu 18.04 + ROS Melodic。由于当年的 Python、ROS、驱动和硬件环境没有被完整保存，当前无法重建整套系统。本版本将保留的任务包、底盘包和配置作为历史工程证据展示；已知缺失包和历史依赖见 [`robot/README.md`](robot/README.md)。
 
 ```bash
 python tools/validate_repo.py
@@ -119,6 +119,5 @@ python tools/validate_repo.py
 - 此仓库不包含主办方提供的车辆模型、竞赛文档、原始数据集和个人信息。保留的 ROS 基线包已在 [`NOTICE.md`](NOTICE.md) 中单独注明来源。
 - Ultralytics 依赖及其许可证说明见 `NOTICE.md` 和 `third_party/licenses/`。
 - 团队原创代码尚未选择开源许可证。在添加正式 `LICENSE` 前，本仓库仅用于作品展示与技术交流，不自动授予复制、修改或再分发权利。
-- 公开前请完成 `docs/PUBLICATION_CHECKLIST.md`。
 
-更多内容：[`系统架构`](docs/ARCHITECTURE.md) · [`工程取舍`](docs/DESIGN_DECISIONS.md) · [`复现说明`](docs/REPRODUCIBILITY.md) · [`模型卡`](models/MODEL_CARD.md)
+更多内容：[`系统架构`](docs/ARCHITECTURE.zh-CN.md) · [`工程取舍`](docs/DESIGN_DECISIONS.zh-CN.md) · [`模型卡`](models/MODEL_CARD.zh-CN.md) · [`视觉工作流`](vision/README.zh-CN.md)
