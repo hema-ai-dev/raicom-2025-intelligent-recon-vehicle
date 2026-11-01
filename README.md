@@ -102,7 +102,7 @@ Training and evaluation require a local dataset. Replace the placeholder paths i
 
 ## Archive and reproduction boundary
 
-The robot code was recovered from the competition vehicle backup and targeted Ubuntu 18.04 with ROS Melodic. The exact historical Python, ROS, driver, and hardware environment was not preserved well enough for full reconstruction. This edition therefore presents the project-specific mission package, chassis package, robot description, and retained configuration as historical engineering evidence. See [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for the known boundaries.
+The robot code was recovered from the competition vehicle backup and targeted Ubuntu 18.04 with ROS Melodic. The exact historical Python, ROS, driver, and hardware environment was not preserved well enough for full reconstruction. This edition therefore presents the retained mission package, chassis package, and configuration as historical engineering evidence. See [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for the known boundaries.
 
 ```bash
 python tools/validate_repo.py
@@ -116,7 +116,7 @@ This command checks archive structure, syntax, hashes, metrics, and publication 
 
 ## Publication and licensing
 
-- The repository excludes team identity documents, the national-final report, organizer-provided files, raw datasets, and vehicle photos containing people.
+- The repository excludes the organizer-provided vehicle model, competition documents, raw datasets, and personal information. The retained ROS baseline packages are separately attributed in [`NOTICE.md`](NOTICE.md).
 - Ultralytics and third-party notices are documented in `NOTICE.md` and `third_party/licenses/`.
 - No open-source license has been selected for the project-authored code. Until a top-level `LICENSE` is added, this repository is provided for portfolio display and technical discussion and does not automatically grant reuse rights.
 - Review [`docs/PUBLICATION_CHECKLIST.md`](docs/PUBLICATION_CHECKLIST.md) before changing the repository to public.

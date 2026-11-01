@@ -102,7 +102,7 @@ python vision/target/infer.py path/to/image.jpg
 
 ## 归档与复现边界
 
-ROS 代码来自比赛实车备份，目标环境是 Ubuntu 18.04 + ROS Melodic。由于当年的 Python、ROS、驱动和硬件环境没有被完整保存，当前无法重建整套系统。本版本将任务包、底盘包、机器人描述和保留配置作为历史工程证据展示；已知边界见 `docs/REPRODUCIBILITY.zh-CN.md`。
+ROS 代码来自比赛实车备份，目标环境是 Ubuntu 18.04 + ROS Melodic。由于当年的 Python、ROS、驱动和硬件环境没有被完整保存，当前无法重建整套系统。本版本将保留的任务包、底盘包和配置作为历史工程证据展示；已知边界见 `docs/REPRODUCIBILITY.zh-CN.md`。
 
 ```bash
 python tools/validate_repo.py
@@ -116,7 +116,7 @@ python tools/validate_repo.py
 
 ## 说明与许可
 
-- 此仓库不包含成员身份信息、国赛报告、主办方资料、原始数据集和实车人物照片。
+- 此仓库不包含主办方提供的车辆模型、竞赛文档、原始数据集和个人信息。保留的 ROS 基线包已在 [`NOTICE.md`](NOTICE.md) 中单独注明来源。
 - Ultralytics 依赖及其许可证说明见 `NOTICE.md` 和 `third_party/licenses/`。
 - 团队原创代码尚未选择开源许可证。在添加正式 `LICENSE` 前，本仓库仅用于作品展示与技术交流，不自动授予复制、修改或再分发权利。
 - 公开前请完成 `docs/PUBLICATION_CHECKLIST.md`。

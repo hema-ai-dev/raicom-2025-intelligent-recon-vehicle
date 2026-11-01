@@ -4,6 +4,8 @@
 
 - Documented in `NOTICE.md` that the baseline ROS packages (`car_bringup`, `nav_demo`) were provided together with the vehicle hardware by the competition organizer, and that the team's work covers the tuned parameters, surveyed waypoints and mission scripts.
 - Replaced the inaccurate `Proprietary` license tag in both ROS `package.xml` files with a reference to `NOTICE.md`, since those packages build on the organizer-provided baseline.
+- Synchronized both root READMEs and the publication checklist with that provenance statement, and removed the stale reference to an included robot-description package.
+- Documented that the retained navigation launch files still depend on the unpublished `mowen` package and cannot run to completion from this archive alone.
 
 ## Presentation clarification
 

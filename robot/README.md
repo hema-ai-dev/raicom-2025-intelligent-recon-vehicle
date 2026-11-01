@@ -9,6 +9,8 @@
 
 The vehicle model package (`mowen`) is not included here because it contains competition-supplied material; it is kept in the private archive only.
 
+The retained `nav_demo/launch/new_nav.launch` and `car_bringup/launch/gmapping.launch` still reference the unpublished `mowen` robot-description package. This historical dependency is intentionally preserved, so those launch files cannot run to completion from the current archive alone.
+
 Hardware drivers are external dependencies and are not vendored in this showcase.
 
 ## Historical fidelity
