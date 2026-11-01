@@ -5,7 +5,10 @@
   <description>RAICOM 2025 navigation, recognition, and water-gun mission integration.</description>
 
   <maintainer email="raicom-team@example.invalid">RAICOM 2025 Team</maintainer>
-  <license>Proprietary</license>
+  <!-- Baseline provided with the vehicle hardware by the competition
+       organizer; team work covers tuned parameters, waypoints and mission
+       scripts. See NOTICE.md. -->
+  <license>TODO: determine baseline license; see NOTICE.md</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>message_generation</build_depend>

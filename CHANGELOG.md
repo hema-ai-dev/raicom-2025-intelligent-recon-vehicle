@@ -1,5 +1,10 @@
 # Changelog
 
+## Provenance clarification
+
+- Documented in `NOTICE.md` that the baseline ROS packages (`car_bringup`, `nav_demo`) were provided together with the vehicle hardware by the competition organizer, and that the team's work covers the tuned parameters, surveyed waypoints and mission scripts.
+- Replaced the inaccurate `Proprietary` license tag in both ROS `package.xml` files with a reference to `NOTICE.md`, since those packages build on the organizer-provided baseline.
+
 ## Presentation clarification
 
 - Reframed the repository as an engineering case study and curated archive rather than a reproducible robot stack.

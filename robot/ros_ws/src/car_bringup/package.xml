@@ -5,7 +5,10 @@
   <description>Vehicle odometry, serial bridge, and localization configuration used by the 2025 car.</description>
 
   <maintainer email="raicom-team@example.invalid">RAICOM 2025 Team</maintainer>
-  <license>Proprietary</license>
+  <!-- Baseline provided with the vehicle hardware by the competition
+       organizer; team work covers tuned parameters, waypoints and mission
+       scripts. See NOTICE.md. -->
+  <license>TODO: determine baseline license; see NOTICE.md</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>dynamic_reconfigure</depend>

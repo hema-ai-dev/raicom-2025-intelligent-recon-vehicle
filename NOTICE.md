@@ -10,6 +10,10 @@ The training and inference entry points use Ultralytics YOLO. The archived depen
 
 ROS Melodic, navigation stack components, `robot_localization`, YDLIDAR drivers, WIT Motion IMU drivers and other hardware integrations remain third-party dependencies. Their source code is intentionally not vendored in this public showcase. Install them from their respective upstream projects and follow their licenses.
 
+## Chassis and navigation baseline
+
+The baseline ROS packages in this showcase (`car_bringup`, `nav_demo`) were provided together with the vehicle hardware by the competition organizer. The team's work on top of that baseline covers the tuned parameters, the surveyed waypoints, and the mission scripts. The baseline code remains subject to its original terms; this repository makes no claim over it.
+
 ## Project code
 
 No top-level open-source license has been selected for the team-authored code. Absence of a license is not permission to copy, modify or redistribute it.
