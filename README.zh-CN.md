@@ -67,7 +67,9 @@ flowchart LR
 
 | 避障 | 打靶 |
 |---|---|
-| <video src="media/demo/obstacle_avoidance.mp4" controls width="100%"></video> | <video src="media/demo/target_shooting.mp4" controls width="100%"></video> |
+| [![避障演示](media/demo/obstacle_avoidance_cover.jpg)](media/demo/obstacle_avoidance.mp4) | [![打靶演示](media/demo/target_shooting_cover.jpg)](media/demo/target_shooting.mp4) |
+
+_点击缩略图播放视频。_
 
 ## 核心代码
 

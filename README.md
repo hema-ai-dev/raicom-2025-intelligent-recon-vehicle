@@ -67,7 +67,9 @@ Two short clips from the competition development vehicle. The first shows autono
 
 | Obstacle avoidance | Target shooting |
 |---|---|
-| <video src="media/demo/obstacle_avoidance.mp4" controls width="100%"></video> | <video src="media/demo/target_shooting.mp4" controls width="100%"></video> |
+| [![Obstacle avoidance demo](media/demo/obstacle_avoidance_cover.jpg)](media/demo/obstacle_avoidance.mp4) | [![Target shooting demo](media/demo/target_shooting_cover.jpg)](media/demo/target_shooting.mp4) |
+
+_Click a thumbnail to play the video._
 
 ## Key code
 
