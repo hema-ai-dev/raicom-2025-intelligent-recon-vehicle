@@ -61,6 +61,14 @@ flowchart LR
 |---|---|
 | ![兵人识别训练曲线](media/training/soldier/results.png) | ![靶标识别训练曲线](media/training/target/results.png) |
 
+## 现场演示
+
+两段来自备赛实车的短视频。第一段展示赛道中的自主避障，第二段展示水弹枪打靶任务。画面中不包含人物或可识别的场地标识。
+
+| 避障 | 打靶 |
+|---|---|
+| <video src="media/demo/obstacle_avoidance.mp4" controls width="100%"></video> | <video src="media/demo/target_shooting.mp4" controls width="100%"></video> |
+
 ## 核心代码
 
 - `robot/ros_ws/src/nav_demo/scripts/mission_controller.py`：保留的赛道点位、分区导航参数、识别接口和历史扫射服务接入点；当前有效代码路径并不完整。

@@ -61,6 +61,14 @@ The following values come from the final validation epoch in the retained traini
 |---|---|
 | ![Soldier recognition training curves](media/training/soldier/results.png) | ![Target detection training curves](media/training/target/results.png) |
 
+## Field demonstration
+
+Two short clips from the competition development vehicle. The first shows autonomous obstacle avoidance during a course run; the second shows the water-gun target-shooting task. No people or identifiable venue markers appear in the footage.
+
+| Obstacle avoidance | Target shooting |
+|---|---|
+| <video src="media/demo/obstacle_avoidance.mp4" controls width="100%"></video> | <video src="media/demo/target_shooting.mp4" controls width="100%"></video> |
+
 ## Key code
 
 - `robot/ros_ws/src/nav_demo/scripts/mission_controller.py` — retained route waypoints, zone-specific navigation parameters, recognition hooks, and historical sweep-service integration points; the active archived path is incomplete.
